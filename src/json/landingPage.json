@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "greeting": "Hello ! I Am",
+    "name": "Rizky Darma R",
+    "introduce": "lorem epsum dolor sit amet lorem epsum dolor sit amet lorem epsum dolor sit amet lorem epsum dolor sit amet"
+  },
+  "service": {
+    "title": "My Awesome",
+    "subtitle": "Service",
+    "content": "lorem epsum dolor sit amet lorem epsum dolor sit amet"
+  },
+  "expertise": {
+    "basic": [
+      {
+        "label": "HTML",
+        "color": "bg-warning",
+        "point": 75
+      },
+      {
+        "label": "CSS",
+        "color": "bg-blue",
+        "point": 75
+      },
+      {
+        "label": "PHP",
+        "color": "bg-red",
+        "point": 75
+      },
+      {
+        "label": "Javascript",
+        "color": "bg-yellow",
+        "point": 75
+      }
+    ],
+    "framework": [
+      {
+        "label": "Code Igniter",
+        "color": "bg-red",
+        "point": 75
+      },
+      {
+        "label": "Laravel",
+        "color": "bg-salmon",
+        "point": 75
+      },
+      {
+        "label": "Node JS",
+        "color": "bg-green",
+        "point": 75
+      },
+      {
+        "label": "React JS",
+        "color": "bg-lightblue",
+        "point": 75
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "UI Design Frontend Cafe Studio Rosid",
+      "date": "03 Maret 2021",
+      "imageUrl": "/images/project/project-1.png"
+    },
+    {
+      "name": "Data Covid-19 buid with React JS",
+      "date": "22 Maret 2021",
+      "imageUrl": "/images/project/project-2.png"
+    },
+    {
+      "name": "Staycation BWA MERN",
+      "date": "15 Maret 2021",
+      "imageUrl": "/images/project/project-3.png"
+    },
+    {
+      "name": "Data Covid-19 buid with React JS",
+      "date": "15 Maret 2021",
+      "imageUrl": "/images/project/project-4.png"
+    },
+    {
+      "name": "UI Design Frontend Cafe Studio Rosid",
+      "date": "15 Maret 2021",
+      "imageUrl": "/images/project/project-5.png"
+    },
+    {
+      "name": "Staycation BWA MERN",
+      "date": "15 Maret 2021",
+      "imageUrl": "/images/project/project-6.png"
+    },
+    {
+      "name": "UI Design Frontend Cafe Studio Rosid",
+      "date": "03 Maret 2021",
+      "imageUrl": "/images/project/project-7.png"
+    },
+    {
+      "name": "Data Covid-19 buid with React JS",
+      "date": "22 Maret 2021",
+      "imageUrl": "/images/project/project-8.png"
+    },
+    {
+      "name": "Staycation BWA MERN",
+      "date": "15 Maret 2021",
+      "imageUrl": "/images/project/project-9.png"
+    }
+  ]
+}
