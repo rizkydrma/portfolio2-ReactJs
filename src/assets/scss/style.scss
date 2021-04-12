@@ -88,8 +88,18 @@
 
 // STYLES
 
+:root {
+  --primary-color: #152c5b;
+  --secondary-color: $secondary;
+  --text-color: #76819e;
+  --blue-color: $blue;
+  --card-color: #fff;
+}
+
 body {
   overflow-x: hidden;
+  background-color: $light;
+
   &::before {
     content: "";
     background-image: url("../images/wave-1.png");
@@ -104,6 +114,49 @@ body {
     z-index: -10;
   }
 }
+
+.dark-theme {
+  background-color: $dark;
+  --primary-color: #fff;
+  --text-color: #adb5bd;
+  --blue-color: #f4f4f4;
+  --card-color: rgb(54, 54, 68);
+}
+
+.theme {
+  position: fixed;
+  width: 50px;
+  height: 40px;
+  padding: 5px 15px;
+  background-color: $blue;
+  border-radius: 20px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  z-index: 999;
+  .icon {
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+
+    .tag {
+      font-size: 0.9rem;
+      font-style: normal;
+    }
+    &:hover {
+      color: $secondary;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+}
+
 .navbar {
   a {
     background-color: transparent;
@@ -113,7 +166,7 @@ body {
       color: $secondary;
 
       &:hover {
-        color: $primary;
+        color: var(--primary-color);
         transform: scale(1.1);
         transition: 0.25s transform ease-in-out;
       }
@@ -124,9 +177,9 @@ body {
     margin-left: 1rem;
 
     .nav-link {
-      color: $primary;
+      color: var(--primary-color);
       &.text-shadow {
-        text-shadow: 2px 3px 10px rgba($primary, 0.2);
+        text-shadow: 2px 3px 10px rgba(var(--primary-color), 0.2);
       }
       &:hover {
         color: $secondary;
@@ -153,21 +206,21 @@ section {
         &.text-greeting {
           font-size: 1.8rem;
           font-weight: 500;
-          color: $primary;
-          text-shadow: 1px 2px 2px rgba($primary, 0.3);
+          color: var(--primary-color);
+          text-shadow: 1px 2px 2px rgba(var(--primary-color), 0.3);
         }
 
         &.text-name {
           font-weight: 2rem;
           font-weight: 700;
           color: $secondary;
-          text-shadow: 1px 2px 7px rgba($primary, 0.3);
+          text-shadow: 1px 2px 7px rgba(var(--primary-color), 0.3);
         }
       }
 
       p {
         &.text-content {
-          color: $gray-700;
+          color: var(--text-color);
           font-weight: 300;
         }
       }
@@ -267,19 +320,19 @@ section {
         &.title {
           font-weight: 700;
           font-size: 2rem;
-          color: $primary;
-          text-shadow: 1px 2px 2px rgba($primary, 0.3);
+          color: var(--primary-color);
+          text-shadow: 1px 2px 2px rgba(var(--primary-color), 0.3);
         }
         &.sub-title {
           font-weight: 500;
           font-size: 1.8rem;
           color: $secondary;
-          text-shadow: 1px 2px 2px rgba($primary, 0.3);
+          text-shadow: 1px 2px 2px rgba(var(--primary-color), 0.3);
         }
       }
       p {
         &.text-content {
-          color: $gray-700;
+          color: var(--text-color);
           font-weight: 300;
         }
       }
@@ -288,13 +341,14 @@ section {
     .card {
       border-radius: 15px;
       margin: 1rem 1.5rem;
+      background-color: var(--card-color);
       h6 {
-        color: $primary;
+        color: var(--primary-color);
       }
 
       p {
         &.text-content {
-          color: $gray-700;
+          color: var(--text-color);
           font-weight: 300;
         }
       }
@@ -363,16 +417,26 @@ section {
   &.expertise {
     margin-top: 2rem;
 
+    h5,
+    h1 {
+      color: var(--primary-color);
+    }
+
     .card {
       border-radius: 15px;
       margin: 1rem 1.5rem;
+      background-color: var(--card-color);
 
       .card-title {
-        color: $primary;
+        color: var(--primary-color);
       }
 
       .progress-custom {
         margin: 1.2rem 1rem;
+
+        .progress-label {
+          color: var(--primary-color);
+        }
 
         .progress {
           background-color: #f4f4f4;
@@ -512,17 +576,19 @@ section {
       padding: 2rem 1rem;
       margin: 1rem 1.5rem;
       border-radius: 20px;
+      background-color: var(--card-color);
 
       h5 {
-        color: $primary;
+        color: var(--primary-color);
       }
 
       .custom-form {
+        background-color: var(--card-color);
         width: 100%;
         border: none;
-        border-bottom: 1px solid rgba($primary, 0.5);
+        border-bottom: 1px solid var(--primary-color);
         padding: 5px 0;
-        color: rgba($primary, 0.8);
+        color: var(--primary-color);
         font-size: 0.8rem;
 
         &:focus {
@@ -545,11 +611,15 @@ footer {
       display: flex;
       justify-content: center;
 
+      a.nav-link {
+        color: var(--primary-color);
+      }
+
       button.nav-link {
         background-color: transparent;
         border: none;
         display: inline;
-        color: $primary;
+        color: var(--blue-color);
         font-size: 0.75rem;
         padding: 0.5rem 0.5rem;
 
@@ -568,7 +638,7 @@ footer {
         display: inline;
         margin-right: 1.5rem;
         a.link-icon {
-          color: $blue;
+          color: var(--primary-color);
           font-size: 1.75rem;
           background-color: transparent;
 
@@ -581,7 +651,7 @@ footer {
   }
 
   .text-footer {
-    color: $gray-700;
+    color: var(--text-color);
     font-size: 0.8rem;
     font-weight: 300;
     word-spacing: 1px;
