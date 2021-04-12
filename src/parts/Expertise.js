@@ -9,8 +9,8 @@ export default function Expertise({ data }) {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <h5 className="text-primary">Skills</h5>
-              <h1 className="text-primary">Expertise</h1>
+              <h5>Skills</h5>
+              <h1>Expertise</h1>
             </div>
           </div>
           <div className="row justify-content-center mt-4">
@@ -22,7 +22,9 @@ export default function Expertise({ data }) {
                     return (
                       <div className="progress-custom" key={index}>
                         <Fade delay={500 * index} triggerOnce={true}>
-                          <h6 className="d-inline-block">{skill.label}</h6>
+                          <h6 className="d-inline-block progress-label">
+                            {skill.label}
+                          </h6>
                           <div className="progress">
                             <div
                               className={`progress-bar ${skill.color}`}
@@ -48,7 +50,9 @@ export default function Expertise({ data }) {
                     return (
                       <div className="progress-custom" key={index}>
                         <Fade delay={500 * index} triggerOnce={true}>
-                          <h6 className="d-inline-block">{skill.label}</h6>
+                          <h6 className="d-inline-block progress-label">
+                            {skill.label}
+                          </h6>
                           <div className="progress">
                             <div
                               className={`progress-bar ${skill.color}`}

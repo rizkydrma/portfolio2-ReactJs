@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function DarkTheme() {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
 
   function onClick() {
     document.body.classList.toggle("dark-theme");

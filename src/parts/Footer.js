@@ -17,7 +17,7 @@ export default function Footer() {
                 </li>
                 <li className="nav-item">
                   <Button href="#service" className="nav-link">
-                    About Us
+                    Service
                   </Button>
                 </li>
                 <li className="nav-item">

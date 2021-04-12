@@ -130,14 +130,12 @@ body {
   padding: 5px 15px;
   background-color: $blue;
   border-radius: 20px;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-right: 1rem;
-  margin-bottom: 3rem;
   z-index: 999;
   .icon {
     font-size: 1rem;
@@ -309,7 +307,7 @@ section {
     .fragment-1 {
       position: absolute;
       width: 30%;
-      top: 170vw;
+      top: 200vw;
       left: 0;
       z-index: -2;
     }

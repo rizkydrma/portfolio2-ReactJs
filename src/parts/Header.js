@@ -4,6 +4,8 @@ import { Fade } from "react-awesome-reveal";
 import Button from "elements/Button";
 
 export default function Header() {
+  const [isNavCollapsed, setIsNavCollapsed] = React.useState(false);
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
     <Fade duration={2000} triggerOnce={true}>
       <header>
@@ -14,17 +16,25 @@ export default function Header() {
                 Rizky Darma
               </Button>
               <button
-                className="navbar-toggler"
+                className={`navbar-toggler ${
+                  !isNavCollapsed ? "collapsed" : ""
+                }`}
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
                 aria-controls="navbarNav"
-                aria-expanded="false"
+                aria-expanded={!isNavCollapsed ? true : false}
                 aria-label="Toggle navigation"
+                onClick={handleNavCollapse}
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
+              <div
+                className={`navbar-collapse collapse ${
+                  isNavCollapsed ? "show" : ""
+                } `}
+                id="navbarNav"
+              >
                 <ul className="navbar-nav ms-auto">
                   <li className="nav-item">
                     <Button
@@ -38,7 +48,7 @@ export default function Header() {
                   </li>
                   <li className="nav-item">
                     <Button className="nav-link" href="#service" hasTextShadow>
-                      About Us
+                      Service
                     </Button>
                   </li>
                   <li className="nav-item">
